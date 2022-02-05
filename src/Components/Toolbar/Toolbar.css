@@ -1,0 +1,35 @@
+.ToolbarWrap{
+    width: 175px;
+    height: 50px;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid gainsboro;
+    box-shadow: 0px 0px 5px 0px gainsboro;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.AddTile, .RemoveTile, .Count{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+
+.Count {
+    width: 75px;
+    font-size: 20px;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
+
+.AddTile, .RemoveTile {
+    cursor: pointer;
+}

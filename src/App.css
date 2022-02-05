@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.Flex{
+  width: 100%;
   min-height: 100vh;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Grid{
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: grid;
+  grid-template-columns: '50% 50%';
+  grid-template-rows: '50vh 50vh';
+  grid-template-areas: "T0 T1" "T0 T2";
+}
+
+.Tile3Main{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: 'Poppins';
+  font-size: 32px;
+  color: #fff;
+  background-color: orange;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px gainsboro;
+  flex-grow: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.Tile{
+  width: calc(50% - 20px);
+  height: calc(50vh - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins';
+  font-size: 32px;
+  color: #fff;
+  background-color: orange;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px gainsboro;
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TileOdd{
+  width: calc(50% - 20px);
+  height: calc(50vh - 20px);
+}
+
+.TileOdd:nth-last-child(1), .TileOdd:nth-last-child(2), .TileOdd:nth-last-child(3) {
+  height: calc(50vh - 20px);
+  width: calc(33.33% - 20px);
+}
+
+.Tile2:nth-child(2), .Tile2:nth-child(3) {
+  height: calc(100vh - 20px);
+  width: calc(50% - 20px);
 }
